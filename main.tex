@@ -1,0 +1,292 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+    portuguese,
+    9pt,
+    xcolor={svgnames},
+    hyperref={colorlinks,urlcolor=DarkBlue,linkcolor=.,citecolor=.}
+    ]{beamer}
+\usepackage{babel}
+
+\usepackage{multimedia}
+\usepackage{ragged2e}
+\usepackage{graphicx}% Include figure files
+\usepackage{bm}% bold math
+\usepackage{amssymb,amsmath,amsfonts}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[b]{esvect}    
+\usepackage{cancel}
+\usepackage{subcaption}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{tikz-cd} % para desenhar
+\tikzset{
+  every picture/.prefix style={
+    execute at begin picture=\shorthandoff{"}
+  }
+}
+
+\usepackage{csquotes}
+\usepackage[backend=biber, style=abnt, ittitles, maxcitenames=2]{biblatex}
+\addbibresource{main.bib}
+\renewcommand*{\bibfont}{\small}
+
+% Função para derivada de vetor
+\newcommand{\vet}[1]{\bm #1}
+\newcommand{\dvet}[1]{\bm {\dot #1}}
+\newcommand{\ddvet}[1]{\bm {\ddot #1}}
+% versor
+\newcommand{\versor}[1]{\hat{\vet #1}}
+% reais
+\newcommand{\R}{\mathbb{R}}
+% derivada
+\newcommand{\der}[2]{\dfrac{d #1}{d #2}}
+% derivada parcial
+\newcommand{\derpar}[2]{\dfrac{\partial #1}{\partial #2}}
+% produto interno
+\newcommand{\prodint}[2]{\left\langle #1, #2 \right\rangle}
+% hamiltoniano
+\newcommand{\Ham}{{\cal H}}
+% norma
+\newcommand\norma[1]{\left\Vert #1 \right\Vert}
+
+\setlength{\columnsep}{0cm}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+% \usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+% \usetheme{CambridgeUS}
+\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid} 1
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+% TITULO: Simulação numérica do Problema de N-Corpos Gravitacional (e um pouco mais)
+% RESUMO: A evolução de sistemas auto-gravitacionais pode ser descrita pelo Problema de N-Corpos Gravitacional (PNCG), e sua simulação numérica permite visualizar, testar e até encontrar propriedades qualitativas do Problema. Existem muitas formas de simular o problema numericamente; neste seminário, serão apresentados integradores temporais tradicionais e simpléticos (aplicáveis a sistemas hamiltonianos no geral) e um corretor numérico baseado em integrais primeiras. Também serão discutidas questões específicas do problema, como formas de lidar com colisões entre partículas e a geração de valores iniciais.
+% Como motivação, através das simulações poderemos visualizar a emergência de setas do tempo gravitacionais a partir de uma visão relacionalista do PNCG.
+
+% VOU DIVIDIR ASSIM:
+% Parte I: O problema
+% - Enunciado do PNCG; Hamiltoniana; integrais primeiras.
+%
+% Parte II: Integração numérica
+% - Integração numérica: ideia básica, métodos básicos (Euler explícito e implícito, RKs); comentar um pouco sobre os outros métodos do tipo que existem.
+% - Métodos simpléticos:
+%   - Panorama geral; existência de hamiltoniana perturbada (backward error analysis)
+%   - Ideia básica para hamiltonianas separáveis; construção de métodos via exponenciais; Métodos básicos: Euler semi-implícito, Velocity-Verlet, Ruth 3 e 4;
+%   - O que fazer com hamiltonianas não separáveis?
+%   - Métodos de Runge-Kutta-Nystrom (ordens 5 e 6), ou Partitioned Runge-Kutta methods;
+%   - Métodos de alta ordem via composição de métodos de baixa ordem: Stormer-Verlet Composto 8 e 10.
+% - O que mais é possível no mundo de integradores?
+%   - Timestep variável, casos tradicional e simplético.
+%   - Block-timesteps para problemas multiescala. Versão tradicional e versão simplética. Questões.
+% - Correção numérica baseada em integrais primeiras. Ideia, vantagens e desvantagens.
+%
+% Parte III: Questões específicas do problema de N-corpos
+% - Como lidar com colisões?
+%   - Usando choques elásticos;
+%   - Amortecendo o potencial;
+%   - Alternativa não usada: Regularização de colisões (Levi-Civita, Kustaanheimo-Stiefel, Aarseth-Zare).
+% - Como gerar valores iniciais? Tudo depende do propósito!
+%   - Objetivo aqui: integrais primeiras.
+%   - Método iterativo;
+%   - Método direto;
+%   - Como é feito em outros casos?
+%
+% Parte IV: Visualizando as setas do tempo gravitacionais
+% - Relembrar o que eram;
+% - Mostrar simulações e resultados.
+%
+% Conclusão, objetivos
+%
+% Bibliografia
+
+
+\title[Simulação Numérica do PNCG]{Simulação Numérica do Problema de N-Corpos Gravitacional}
+
+\author{Octavio Augusto Potalej} % Your name
+\institute[IME] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Instituto de Matemática e Estatística \\
+Universidade de São Paulo
+}
+\date{Março, 2026} % Date, can be changed to a custom date
+
+
+\begin{document}
+
+\begin{frame}
+    \frametitle{}
+    \titlepage % Print the title page as the first slide
+
+    \begin{textblock*}{4cm}(5.65cm,6.5cm)
+        \includegraphics[width=1.7cm]{img/coloquinho.png}
+    \end{textblock*}
+
+    % \begin{figure}
+    %     \centering
+    %     \includegraphics[width=0.1\linewidth]{img/coloquinho.png}
+    %     \label{fig:coloquinho}
+    % \end{figure}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+% \begin{frame}
+% \justifying
+% \frametitle{Motivação}
+
+% \begin{columns}[c]
+%     \column{.50\textwidth}\justifying
+%         \begin{itemize}
+%             \item Começamos estudando um artigo sobre setas do tempo gravitacionais;
+%             \item Precisamos nos aprofundar no Problema de N-Corpos;
+%             \item Decidimos simular o PNCG numericamente para visualizar a teoria;
+%             \item Com simulações, podemos visualizar resultados teóricos e até obter ideias novas sobre o problema!
+%         \end{itemize}
+    
+%     \column{.50\textwidth}
+%         \begin{figure}
+%             \centering
+%             \includegraphics[width=\linewidth]{img/capa_artigo.jpg}
+%             \caption{Capa do artigo}
+%             \label{fig:capa-artigo}
+%         \end{figure}
+% \end{columns}
+
+% \end{frame}
+
+\begin{frame}
+\justifying
+\frametitle{Esquema}
+
+\begin{itemize}
+    \item O problema.
+    \item Questões específicas: colisões e valores iniciais.
+    \item Métodos de integração.
+    \item Aplicações.
+\end{itemize}
+    
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+
+% 1. O Problema. 
+\input{secoes/o_problema}
+
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+
+% 2. Questões específicas
+\input{secoes/questoes_especificas}
+
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+
+% 3. Métodos de integração
+\input{secoes/integracao}
+
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+
+% 4. Aplicações
+\input{secoes/aplicacoes}
+
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+
+% %------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}[allowframebreaks]
+\justifying
+\frametitle{Referências} 
+\nocite{*}
+\small
+\printbibliography
+\end{frame}
+
+%------------------------------------------------
+
+\end{document}

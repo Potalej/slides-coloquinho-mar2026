@@ -1,0 +1,69 @@
+{
+  "nome": "Lemniscata",
+  "G": 0.1E+1,
+  "N": 3,
+  "paralelo": false,
+  "gpu": false,
+  "massas_iguais": false,
+  "exibir": false,
+  "integracao": {
+    "metodo": "ab4",
+    "timestep": 0.1E-2,
+    "amortecedor": 0.0E+0,
+    "t0": 0,
+    "tf": 50,
+    "checkpoints": 2000
+  },
+  "colisoes": {
+    "colidir": false,
+    "metodo": "direto",
+    "densidade": 0.3E+1
+  },
+  "correcao": {
+    "corrigir": false,
+    "margem_erro": 0.1E-2,
+    "max_num_tentativas": 1
+  },
+  "valores_iniciais": {
+    "massas": [
+      0.1E+1,
+      0.1E+1,
+      0.1E+1
+    ],
+    "posicoes": [
+      [
+        -0.97000436000000001E+0,
+        0.24308753E+0,
+        0.0E+0
+      ],
+      [
+        0.0E+0,
+        0.0E+0,
+        0.0E+0
+      ],
+      [
+        0.97000436000000001E+0,
+        -0.24308753E+0,
+        0.0E+0
+      ]
+    ],
+    "momentos": [
+      [
+        0.46620368499999998E+0,
+        0.43236573E+0,
+        0.0E+0
+      ],
+      [
+        -0.93240736999999996E+0,
+        -0.86473146000000001E+0,
+        0.0E+0
+      ],
+      [
+        0.46620368499999998E+0,
+        0.43236573E+0,
+        0.0E+0
+      ]
+    ]
+  },
+  "modo": "vi"
+}

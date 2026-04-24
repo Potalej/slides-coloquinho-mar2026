@@ -1,0 +1,401 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 72.08      1.11     1.11  1000142     0.00     0.00  __funcoes_forca_md_MOD_forcas_seq
+ 24.68      1.49     0.38  1000000     0.00     0.00  __ab5_MOD_metodo
+  3.25      1.54     0.05 11000000     0.00     0.00  __integrador_MOD_mp_rb
+  0.00      1.54     0.00  1000142     0.00     0.00  __integrador_MOD_forcas
+  0.00      1.54     0.00  1000004     0.00     0.00  __integrador_MOD_aplicar
+  0.00      1.54     0.00       41     0.00     0.00  __json_utils_mod_MOD_json_get_float_vec
+  0.00      1.54     0.00       14     0.00     0.00  __json_utils_mod_MOD_json_get_float
+  0.00      1.54     0.00       11     0.00     0.00  __arquivos_MOD_escrever_data
+  0.00      1.54     0.00       10     0.00     0.00  __arquivos_MOD_atualizar_arquivo_bkp
+  0.00      1.54     0.00       10     0.00     0.00  __simulacao_MOD_output_passo
+  0.00      1.54     0.00        5     0.00     0.00  __json_utils_mod_MOD_json_get_string
+  0.00      1.54     0.00        4     0.00     0.00  __svcp10s35_MOD_metodo
+  0.00      1.54     0.00        2     0.00     0.00  __diretorio_MOD_diretorio_data
+  0.00      1.54     0.00        2     0.00     0.00  __diretorio_MOD_diretorio_out
+  0.00      1.54     0.00        2     0.00     0.00  __funcoes_forca_MOD_inicializar_forcas
+  0.00      1.54     0.00        2     0.00     0.00  __integrador_MOD_inicializar_massas
+  0.00      1.54     0.00        2     0.00     0.00  __integrador_MOD_iniciar_base
+  0.00      1.54     0.00        2     0.00     0.00  __integradores_MOD_definir_metodo
+  0.00      1.54     0.00        2     0.00     0.77  __simulacao_vi_MOD_simular_vi
+  0.00      1.54     0.00        2     0.00     0.00  __string_utils_MOD_int_para_string
+  0.00      1.54     0.00        1     0.00     1.54  MAIN__
+  0.00      1.54     0.00        1     0.00     0.00  __ab5_MOD_iniciar_ab5
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_MOD_atualizar_arquivo_info
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_MOD_criar_data
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_MOD_criar_formatos
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_MOD_definir_diretorio_saida
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_MOD_escrever_cabecalho_data
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_MOD_excluir_bkp
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_MOD_fechar
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_MOD_gerar_nome_diretorio
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_MOD_inicializar_arquivo_info
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_json_MOD_ler_json
+  0.00      1.54     0.00        1     0.00     0.00  __arquivos_json_MOD_salvar_vi_json
+  0.00      1.54     0.00        1     0.00     0.00  __diretorio_MOD_criar_dir
+  0.00      1.54     0.00        1     0.00     0.00  __integrador_MOD_atualizar_constantes
+  0.00      1.54     0.00        1     0.00     0.00  __json_utils_mod_MOD_json_clone
+  0.00      1.54     0.00        1     0.00     0.00  __simulacao_MOD_inicializar_data
+  0.00      1.54     0.00        1     0.00     0.00  __simulacao_MOD_inicializar_metodo
+  0.00      1.54     0.00        1     0.00     0.00  __simulacao_MOD_iniciar
+  0.00      1.54     0.00        1     0.00     1.54  __simulacao_MOD_rodar
+  0.00      1.54     0.00        1     0.00     0.00  __simulador_mod_MOD_rodar_simulacao
+  0.00      1.54     0.00        1     0.00     0.00  __string_utils_MOD_data_hora_string
+  0.00      1.54     0.00        1     0.00     0.00  __svcp10s35_MOD_atualizar_constantes
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2023 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.65% of 1.54 seconds
+
+index % time    self  children    called     name
+[1]    100.0    0.00    1.54       1+2       <cycle 1 as a whole> [1]
+                0.00    1.54       2             __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+                0.00    0.00       1             __simulador_mod_MOD_rodar_simulacao <cycle 1> [50]
+-----------------------------------------------
+                0.00    1.54       1/1           main [3]
+[2]    100.0    0.00    1.54       1         MAIN__ [2]
+                0.00    1.54       1/1           __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]    100.0    0.00    1.54                 main [3]
+                0.00    1.54       1/1           MAIN__ [2]
+-----------------------------------------------
+                0.00    0.00       4/1000004     __simulacao_MOD_inicializar_metodo [12]
+                0.00    1.54 1000000/1000004     __simulacao_MOD_rodar [6]
+[4]    100.0    0.00    1.54 1000004         __integrador_MOD_aplicar [4]
+                0.38    1.16 1000000/1000000     __ab5_MOD_metodo [7]
+                0.00    0.00 1000000/11000000     __integrador_MOD_mp_rb [10]
+                0.00    0.00       4/4           __svcp10s35_MOD_metodo [11]
+                0.00    0.00       2/1000142     __integrador_MOD_forcas [9]
+-----------------------------------------------
+                                   1             __simulador_mod_MOD_rodar_simulacao <cycle 1> [50]
+                0.00    1.54       1/1           MAIN__ [2]
+[5]    100.0    0.00    1.54       2         __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+                0.00    1.54       1/1           __simulacao_MOD_rodar [6]
+                0.00    0.00       1/1           __simulacao_MOD_iniciar [13]
+                0.00    0.00      41/41          __json_utils_mod_MOD_json_get_float_vec [21]
+                0.00    0.00       1/1           __arquivos_json_MOD_ler_json [44]
+                0.00    0.00       1/5           __json_utils_mod_MOD_json_get_string [26]
+                                   1             __simulador_mod_MOD_rodar_simulacao <cycle 1> [50]
+-----------------------------------------------
+                0.00    1.54       1/1           __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+[6]    100.0    0.00    1.54       1         __simulacao_MOD_rodar [6]
+                0.00    1.54 1000000/1000004     __integrador_MOD_aplicar [4]
+                0.00    0.00      10/11          __arquivos_MOD_escrever_data [23]
+                0.00    0.00      10/10          __arquivos_MOD_atualizar_arquivo_bkp [24]
+                0.00    0.00      10/10          __simulacao_MOD_output_passo [25]
+                0.00    0.00       1/1           __arquivos_MOD_atualizar_arquivo_info [35]
+                0.00    0.00       1/1           __arquivos_MOD_excluir_bkp [40]
+                0.00    0.00       1/1           __arquivos_MOD_fechar [41]
+-----------------------------------------------
+                0.38    1.16 1000000/1000000     __integrador_MOD_aplicar [4]
+[7]     99.7    0.38    1.16 1000000         __ab5_MOD_metodo [7]
+                0.00    1.11 1000000/1000142     __integrador_MOD_forcas [9]
+                0.05    0.00 10000000/11000000     __integrador_MOD_mp_rb [10]
+-----------------------------------------------
+                1.11    0.00 1000142/1000142     __integrador_MOD_forcas [9]
+[8]     72.1    1.11    0.00 1000142         __funcoes_forca_md_MOD_forcas_seq [8]
+-----------------------------------------------
+                0.00    0.00       2/1000142     __integrador_MOD_aplicar [4]
+                0.00    0.00     140/1000142     __svcp10s35_MOD_metodo [11]
+                0.00    1.11 1000000/1000142     __ab5_MOD_metodo [7]
+[9]     72.1    0.00    1.11 1000142         __integrador_MOD_forcas [9]
+                1.11    0.00 1000142/1000142     __funcoes_forca_md_MOD_forcas_seq [8]
+-----------------------------------------------
+                0.00    0.00 1000000/11000000     __integrador_MOD_aplicar [4]
+                0.05    0.00 10000000/11000000     __ab5_MOD_metodo [7]
+[10]     3.2    0.05    0.00 11000000         __integrador_MOD_mp_rb [10]
+-----------------------------------------------
+                0.00    0.00       4/4           __integrador_MOD_aplicar [4]
+[11]     0.0    0.00    0.00       4         __svcp10s35_MOD_metodo [11]
+                0.00    0.00     140/1000142     __integrador_MOD_forcas [9]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_iniciar [13]
+[12]     0.0    0.00    0.00       1         __simulacao_MOD_inicializar_metodo [12]
+                0.00    0.00       4/1000004     __integrador_MOD_aplicar [4]
+                0.00    0.00       2/2           __integradores_MOD_definir_metodo [32]
+                0.00    0.00       1/5           __json_utils_mod_MOD_json_get_string [26]
+                0.00    0.00       1/1           __ab5_MOD_iniciar_ab5 [34]
+                0.00    0.00       1/1           __integrador_MOD_atualizar_constantes [47]
+                0.00    0.00       1/2           __integrador_MOD_iniciar_base [31]
+                0.00    0.00       1/1           __svcp10s35_MOD_atualizar_constantes [52]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+[13]     0.0    0.00    0.00       1         __simulacao_MOD_iniciar [13]
+                0.00    0.00       1/1           __simulacao_MOD_inicializar_metodo [12]
+                0.00    0.00       4/14          __json_utils_mod_MOD_json_get_float [22]
+                0.00    0.00       1/1           __json_utils_mod_MOD_json_clone [48]
+                0.00    0.00       1/5           __json_utils_mod_MOD_json_get_string [26]
+                0.00    0.00       1/2           __diretorio_MOD_diretorio_data [27]
+                0.00    0.00       1/1           __simulacao_MOD_inicializar_data [49]
+                0.00    0.00       1/1           __arquivos_json_MOD_salvar_vi_json [45]
+-----------------------------------------------
+                0.00    0.00      41/41          __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+[21]     0.0    0.00    0.00      41         __json_utils_mod_MOD_json_get_float_vec [21]
+-----------------------------------------------
+                0.00    0.00       1/14          __simulador_mod_MOD_rodar_simulacao <cycle 1> [50]
+                0.00    0.00       4/14          __simulacao_MOD_iniciar [13]
+                0.00    0.00       4/14          __integrador_MOD_iniciar_base [31]
+                0.00    0.00       5/14          __arquivos_MOD_inicializar_arquivo_info [43]
+[22]     0.0    0.00    0.00      14         __json_utils_mod_MOD_json_get_float [22]
+-----------------------------------------------
+                0.00    0.00       1/11          __simulacao_MOD_inicializar_data [49]
+                0.00    0.00      10/11          __simulacao_MOD_rodar [6]
+[23]     0.0    0.00    0.00      11         __arquivos_MOD_escrever_data [23]
+-----------------------------------------------
+                0.00    0.00      10/10          __simulacao_MOD_rodar [6]
+[24]     0.0    0.00    0.00      10         __arquivos_MOD_atualizar_arquivo_bkp [24]
+-----------------------------------------------
+                0.00    0.00      10/10          __simulacao_MOD_rodar [6]
+[25]     0.0    0.00    0.00      10         __simulacao_MOD_output_passo [25]
+-----------------------------------------------
+                0.00    0.00       1/5           __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+                0.00    0.00       1/5           __simulacao_MOD_inicializar_metodo [12]
+                0.00    0.00       1/5           __simulacao_MOD_iniciar [13]
+                0.00    0.00       2/5           __arquivos_MOD_inicializar_arquivo_info [43]
+[26]     0.0    0.00    0.00       5         __json_utils_mod_MOD_json_get_string [26]
+-----------------------------------------------
+                0.00    0.00       1/2           __simulacao_MOD_iniciar [13]
+                0.00    0.00       1/2           __arquivos_MOD_gerar_nome_diretorio [42]
+[27]     0.0    0.00    0.00       2         __diretorio_MOD_diretorio_data [27]
+                0.00    0.00       2/2           __diretorio_MOD_diretorio_out [28]
+-----------------------------------------------
+                0.00    0.00       2/2           __diretorio_MOD_diretorio_data [27]
+[28]     0.0    0.00    0.00       2         __diretorio_MOD_diretorio_out [28]
+-----------------------------------------------
+                0.00    0.00       2/2           __integrador_MOD_iniciar_base [31]
+[29]     0.0    0.00    0.00       2         __funcoes_forca_MOD_inicializar_forcas [29]
+-----------------------------------------------
+                0.00    0.00       2/2           __integrador_MOD_iniciar_base [31]
+[30]     0.0    0.00    0.00       2         __integrador_MOD_inicializar_massas [30]
+-----------------------------------------------
+                0.00    0.00       1/2           __simulacao_MOD_inicializar_metodo [12]
+                0.00    0.00       1/2           __ab5_MOD_iniciar_ab5 [34]
+[31]     0.0    0.00    0.00       2         __integrador_MOD_iniciar_base [31]
+                0.00    0.00       4/14          __json_utils_mod_MOD_json_get_float [22]
+                0.00    0.00       2/2           __integrador_MOD_inicializar_massas [30]
+                0.00    0.00       2/2           __funcoes_forca_MOD_inicializar_forcas [29]
+-----------------------------------------------
+                0.00    0.00       2/2           __simulacao_MOD_inicializar_metodo [12]
+[32]     0.0    0.00    0.00       2         __integradores_MOD_definir_metodo [32]
+-----------------------------------------------
+                0.00    0.00       2/2           __arquivos_MOD_criar_formatos [37]
+[33]     0.0    0.00    0.00       2         __string_utils_MOD_int_para_string [33]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_inicializar_metodo [12]
+[34]     0.0    0.00    0.00       1         __ab5_MOD_iniciar_ab5 [34]
+                0.00    0.00       1/2           __integrador_MOD_iniciar_base [31]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_rodar [6]
+[35]     0.0    0.00    0.00       1         __arquivos_MOD_atualizar_arquivo_info [35]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_inicializar_data [49]
+[36]     0.0    0.00    0.00       1         __arquivos_MOD_criar_data [36]
+                0.00    0.00       1/1           __arquivos_MOD_criar_formatos [37]
+                0.00    0.00       1/1           __arquivos_MOD_gerar_nome_diretorio [42]
+                0.00    0.00       1/1           __diretorio_MOD_criar_dir [46]
+-----------------------------------------------
+                0.00    0.00       1/1           __arquivos_MOD_criar_data [36]
+[37]     0.0    0.00    0.00       1         __arquivos_MOD_criar_formatos [37]
+                0.00    0.00       2/2           __string_utils_MOD_int_para_string [33]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_inicializar_data [49]
+[38]     0.0    0.00    0.00       1         __arquivos_MOD_definir_diretorio_saida [38]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_inicializar_data [49]
+[39]     0.0    0.00    0.00       1         __arquivos_MOD_escrever_cabecalho_data [39]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_rodar [6]
+[40]     0.0    0.00    0.00       1         __arquivos_MOD_excluir_bkp [40]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_rodar [6]
+[41]     0.0    0.00    0.00       1         __arquivos_MOD_fechar [41]
+-----------------------------------------------
+                0.00    0.00       1/1           __arquivos_MOD_criar_data [36]
+[42]     0.0    0.00    0.00       1         __arquivos_MOD_gerar_nome_diretorio [42]
+                0.00    0.00       1/2           __diretorio_MOD_diretorio_data [27]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_inicializar_data [49]
+[43]     0.0    0.00    0.00       1         __arquivos_MOD_inicializar_arquivo_info [43]
+                0.00    0.00       5/14          __json_utils_mod_MOD_json_get_float [22]
+                0.00    0.00       2/5           __json_utils_mod_MOD_json_get_string [26]
+                0.00    0.00       1/1           __string_utils_MOD_data_hora_string [51]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+[44]     0.0    0.00    0.00       1         __arquivos_json_MOD_ler_json [44]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_iniciar [13]
+[45]     0.0    0.00    0.00       1         __arquivos_json_MOD_salvar_vi_json [45]
+-----------------------------------------------
+                0.00    0.00       1/1           __arquivos_MOD_criar_data [36]
+[46]     0.0    0.00    0.00       1         __diretorio_MOD_criar_dir [46]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_inicializar_metodo [12]
+[47]     0.0    0.00    0.00       1         __integrador_MOD_atualizar_constantes [47]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_iniciar [13]
+[48]     0.0    0.00    0.00       1         __json_utils_mod_MOD_json_clone [48]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_iniciar [13]
+[49]     0.0    0.00    0.00       1         __simulacao_MOD_inicializar_data [49]
+                0.00    0.00       1/1           __arquivos_MOD_definir_diretorio_saida [38]
+                0.00    0.00       1/1           __arquivos_MOD_criar_data [36]
+                0.00    0.00       1/1           __arquivos_MOD_escrever_cabecalho_data [39]
+                0.00    0.00       1/1           __arquivos_MOD_inicializar_arquivo_info [43]
+                0.00    0.00       1/11          __arquivos_MOD_escrever_data [23]
+-----------------------------------------------
+                                   1             __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+[50]     0.0    0.00    0.00       1         __simulador_mod_MOD_rodar_simulacao <cycle 1> [50]
+                0.00    0.00       1/14          __json_utils_mod_MOD_json_get_float [22]
+                                   1             __simulacao_vi_MOD_simular_vi <cycle 1> [5]
+-----------------------------------------------
+                0.00    0.00       1/1           __arquivos_MOD_inicializar_arquivo_info [43]
+[51]     0.0    0.00    0.00       1         __string_utils_MOD_data_hora_string [51]
+-----------------------------------------------
+                0.00    0.00       1/1           __simulacao_MOD_inicializar_metodo [12]
+[52]     0.0    0.00    0.00       1         __svcp10s35_MOD_atualizar_constantes [52]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2023 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+   [2] MAIN__                 [45] __arquivos_json_MOD_salvar_vi_json [21] __json_utils_mod_MOD_json_get_float_vec
+  [34] __ab5_MOD_iniciar_ab5  [46] __diretorio_MOD_criar_dir [26] __json_utils_mod_MOD_json_get_string
+   [7] __ab5_MOD_metodo       [27] __diretorio_MOD_diretorio_data [49] __simulacao_MOD_inicializar_data
+  [24] __arquivos_MOD_atualizar_arquivo_bkp [28] __diretorio_MOD_diretorio_out [12] __simulacao_MOD_inicializar_metodo
+  [35] __arquivos_MOD_atualizar_arquivo_info [29] __funcoes_forca_MOD_inicializar_forcas [13] __simulacao_MOD_iniciar
+  [36] __arquivos_MOD_criar_data [8] __funcoes_forca_md_MOD_forcas_seq [25] __simulacao_MOD_output_passo
+  [37] __arquivos_MOD_criar_formatos [4] __integrador_MOD_aplicar [6] __simulacao_MOD_rodar
+  [38] __arquivos_MOD_definir_diretorio_saida [47] __integrador_MOD_atualizar_constantes [5] __simulacao_vi_MOD_simular_vi
+  [39] __arquivos_MOD_escrever_cabecalho_data [9] __integrador_MOD_forcas [50] __simulador_mod_MOD_rodar_simulacao
+  [23] __arquivos_MOD_escrever_data [30] __integrador_MOD_inicializar_massas [51] __string_utils_MOD_data_hora_string
+  [40] __arquivos_MOD_excluir_bkp [31] __integrador_MOD_iniciar_base [33] __string_utils_MOD_int_para_string
+  [41] __arquivos_MOD_fechar  [10] __integrador_MOD_mp_rb [52] __svcp10s35_MOD_atualizar_constantes
+  [42] __arquivos_MOD_gerar_nome_diretorio [32] __integradores_MOD_definir_metodo [11] __svcp10s35_MOD_metodo
+  [43] __arquivos_MOD_inicializar_arquivo_info [48] __json_utils_mod_MOD_json_clone [1] <cycle 1>
+  [44] __arquivos_json_MOD_ler_json [22] __json_utils_mod_MOD_json_get_float

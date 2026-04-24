@@ -1,0 +1,22 @@
+# gravidade-fortran v1.1.0_real64                 
+                                                  
+# configuracoes                                   
+-- corpos:  3                                     
+-- metodo:  rungekutta4                           
+-- G:  1.0000000000000000                         
+-- h:  0.10000000000000000E-2                     
+-- amortecimento:  0.0000000000000000             
+-- checkpoints:  2000                             
+-- passos:  100000000
+-- t0:  0                                         
+-- tf:  50                                        
+-- paralelizacao:    F   F   32                   
+-- correcao:  F                                   
+-- correcao margem erro: n/a                      
+-- correcao max num tent.: n/a                    
+-- colisoes:  F                                   
+-- densidade: n/a                                 
+                                                  
+# simulacao:                                      
+-- inicio:  19:57 23/02/2026                      
+-- duracao:  0.30474037863314152E-1
